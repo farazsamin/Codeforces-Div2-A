@@ -1,0 +1,32 @@
+/*
+Problem Link 	: https://codeforces.com/contest/1088/problem/A
+
+
+Approach 		: If x==1 , No solution, else we can check for every possible combination condition.if condition  is true return it.
+
+*/
+
+
+#include<bits\stdc++.h>
+using namespace std;
+int main()
+{
+    int x;
+    cin>>x;
+    if(x==1){
+        cout<<"-1"<<endl;
+ 		return 0;
+    
+	}
+	
+    for(int i=2;i<=x;i++){
+        for(int j=2;j<=x;j++){
+            if((i%j==0)&& (i*j>x)&&(i/j<x)){        //checking every possible combination
+                cout<<i<<" "<<j<<endl;
+                return 0;
+            }
+ 
+        }
+    }
+    cout<<"-1"<<endl;     // if condition is false
+}
