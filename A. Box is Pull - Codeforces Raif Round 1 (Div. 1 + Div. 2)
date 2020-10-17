@@ -1,0 +1,28 @@
+/*
+Problem Link 	: https://codeforces.com/contest/1428/problem/A
+
+
+Approach 		: If x1=x2 or y1=y2 then ans = abs(x1-x2)+abs(y1-y2) is the ans.
+                  else we need to move to go up/down/right/left to move the box.that will cost 2 second .so add 2 with ans.
+
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main(){
+	
+	int t,n,x;
+	cin>>t;
+	while(t--){
+		long long x1,y1,x2,y2;
+		cin>>x1>>y1>>x2>>y2;
+		long long ans = abs(x1-x2) + abs(y1-y2);
+		if (x1 == x2 || y1 == y2){
+			cout <<ans<<endl;
+		}
+		else cout <<ans+ 2 <<endl;;
+		
+	}
+	
+}
