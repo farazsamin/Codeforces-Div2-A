@@ -1,0 +1,37 @@
+/*
+Problem Link 	: https://codeforces.com/contest/1419/problem/A
+
+
+Approach 		: Count the occurrance of odd and even values.
+  				  if n is even and even occurrance is present 
+  				  and if n is odd and odd occurrance is absent (last digit will always be even), then Breach wins, else Raze wins. 
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+ 
+ 
+int main()
+{
+    ll t,n;
+    cin>>t;
+    while(t--){
+    int odd=0,even=0;
+    cin>>n;
+    string s;
+    cin>>s;
+   
+    for(int i=0;i<s.size();i+=2){
+    	if(s[i]%2!=0)
+    	 odd++;
+	}
+	for(int i=1;i<s.size();i+=2){
+    	if(s[i]%2==0)
+    	 even++;
+	}
+	if((n%2==0 && even>0) || (n%2==1 && odd<=0)) cout<<"2"<<endl;
+	else cout<<"1"<<endl;
+}
+	 
+}
