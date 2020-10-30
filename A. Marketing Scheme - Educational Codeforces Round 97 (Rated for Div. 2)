@@ -1,0 +1,29 @@
+/*
+Problem Link 	: https://codeforces.com/contest/1437/problem/A
+
+
+Approach 		: If l is less than ceil(r+1)/2 , then ans is NO . else YES.
+
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+ 
+ 
+int main()
+{
+  int t,l,r;
+  cin>>t;
+  while(t--){
+  	cin>>l>>r;
+  	int temp = ceil((r+1)/2.0);
+  	if(temp>l) {
+  		cout<<"NO"<<endl;
+	  }
+	else{
+		cout<<"YES"<<endl;
+	}
+  }
+	 
+}
