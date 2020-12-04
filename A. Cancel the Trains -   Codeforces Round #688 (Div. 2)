@@ -1,0 +1,39 @@
+/*
+Problem Link 	: https://codeforces.com/contest/1453/problem/A
+
+
+Approach 		: If the number in two array are same, then there will be a crash. so ans will be added by 1. After checking all the numbers from two array,we get final answer.
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+ 
+ 
+int main()
+{
+  ll t,n,m;
+  cin>>t;
+  while(t--){
+    cin>>n>>m;
+    int arr[n],brr[m];
+    for(int i=0;i<n;i++)
+      cin>>arr[i];
+    for(int i=0;i<m;i++)
+      cin>>brr[i];
+    int ans=0;
+    for(int i=0;i<n;i++){
+    	for(int j=0;j<m;j++){
+    		if(arr[i]==brr[j]){
+    		  ans++;
+    		  break;
+    	    }
+    	    else if(arr[i]<brr[j])
+    	      break;
+		}
+	}
+	cout<<ans<<endl;
+    
+  }
+	 
+}
