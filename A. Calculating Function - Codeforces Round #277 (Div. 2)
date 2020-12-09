@@ -1,0 +1,23 @@
+/*
+Problem Link 	: https://codeforces.com/problemset/problem/486/A
+
+
+Approach 		:  If n is even print n/2 . Else print -(n/2)+1
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+ 
+ 
+int main()
+{
+  long long n;
+  cin>>n;
+  if(n%2==0) cout<<n/2<<endl;
+  else cout<<-((n/2)+1)<<endl;
+  
+    	 
+}
+
+
