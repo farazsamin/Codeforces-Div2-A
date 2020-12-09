@@ -1,0 +1,30 @@
+/*
+Problem Link 	: https://codeforces.com/problemset/problem/705/A
+
+
+Approach 		  : as i starts from 0 , so if it is even print "I hate" else "I love" . if i==n-1 then print "it" else print "that".
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+ 
+ 
+int main()
+{
+  int n;
+  cin>>n;
+  for(int i=0;i<n;i++){
+  	if(i%2==0){
+  	   cout<<"I hate ";
+	   if(i==n-1) cout<<"it";
+	   else cout<<"that ";	
+	}else{
+	   cout<<"I love ";
+	   if(i==n-1) cout<<"it";
+	   else cout<<"that ";	
+	}
+  }
+    	 
+}
+
+
