@@ -1,0 +1,28 @@
+/*
+Problem Link 	: https://codeforces.com/problemset/problem/41/A
+
+
+Approach 		  : If reverse string of t is equal to s, then answer is yes else ans is NO.
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+ 
+ 
+int main()
+{
+  ll n,m;
+  
+  string s,t;
+  cin>>s>>t;
+  reverse(t.begin(),t.end());
+  if(s==t) cout<<"YES"<<endl;
+  else cout<<"NO"<<endl;
+  
+  
+
+	 
+}
+
+
