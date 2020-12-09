@@ -1,0 +1,31 @@
+/*
+Problem Link 	: https://codeforces.com/contest/1419/problem/A
+
+
+Approach 		 :  If s[1] of first string and s[0] of second string are same, then it will add new answer.Repeat this steps till n.sum==1 at first because one magnet will be formed surely.
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+ 
+ 
+int main()
+{
+  int t,n;
+  cin>>n;
+  string s;
+  cin>>s;
+  int sum=1;
+  char c = s[1];
+  for(int i=0;i<n-1;i++){
+    cin>>s;
+    if(c==s[0]) sum++;
+    c=s[1];
+  }
+  cout<<sum<<endl;
+  
+    	 
+}
+
+
