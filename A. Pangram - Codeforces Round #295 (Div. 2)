@@ -1,0 +1,37 @@
+/*
+Problem Link 	: https://codeforces.com/problemset/problem/520/A
+
+
+Approach 		 :  At first, make the whole string uppercase, then count the frequency of all characters.If any alphabet is missing then ans is "NO" else ans is "YES"
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+ 
+ 
+int main()
+{
+  
+   int n;
+   cin>>n;
+   string s;
+   cin>>s;
+   int cnt[100]={};
+   transform(s.begin(),s.end(),s.begin(), ::toupper);
+   for(int i=0;i<n;i++){
+   	 cnt[s[i]]++;
+   }
+   for(int i=65;i<=90;i++){
+//   	 cout<<cnt[i]<<" ";
+   	 if(cnt[i]==0){
+   	 	cout<<"NO"<<endl;
+   	 	return 0;
+	 }
+   }
+   cout<<"YES"<<endl;
+  
+  
+    	 
+}
+
+
