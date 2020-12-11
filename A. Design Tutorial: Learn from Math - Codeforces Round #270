@@ -1,0 +1,22 @@
+/*
+Problem Link 	: https://codeforces.com/problemset/problem/472/A
+
+
+Approach 		  :  If n is even then ans will n-8 and 8,Else ans will 9 and n-9, which are composite numbers.
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+ 
+ 
+int main() {
+ 
+ 
+  int t,n;
+   cin>>n;
+   if(n%2==0){
+   	 cout<<8<<" "<<n-8<<endl;
+   }else
+     cout<<9<<" "<<n-9<<endl;
+}
