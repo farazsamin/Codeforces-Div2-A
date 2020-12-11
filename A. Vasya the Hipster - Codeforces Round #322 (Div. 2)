@@ -1,0 +1,21 @@
+/*
+Problem Link 	: https://codeforces.com/problemset/problem/581/A
+
+
+Approach 		 : Sort the numbers. Print the first sorted value as this is the maximum possible different color combination possible. And Print the second value by substract it from first value and divided by 2.
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+ 
+ 
+int main() {
+   int arr[2];
+   cin>>arr[0]>>arr[1];
+   sort(arr,arr+2);
+   cout<<arr[0]<<" "<<(arr[1]-arr[0])/2<<endl;
+   
+ 
+  
+}
