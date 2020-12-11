@@ -1,0 +1,29 @@
+/*
+Problem Link 	: https://codeforces.com/problemset/problem/148/A
+
+
+Approach 		:  Find the number which is not divisible by k,l,m,n and add it to the cnt. then substract it from d . 
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+ 
+ 
+int main()
+{
+  int k,l,m,d,n;
+  cin>>k>>l>>m>>n>>d;
+  int cnt=0;
+  for(int i=1;i<=d;i++){
+  	if(i%k && i%l && i%m && i%n)
+  	   cnt++;
+  }
+  cout<<d-cnt<<endl;
+
+  
+  
+    	 
+}
+
+
