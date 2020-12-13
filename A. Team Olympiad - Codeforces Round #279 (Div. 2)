@@ -1,0 +1,28 @@
+/*
+Problem Link 	: https://codeforces.com/problemset/problem/490/A
+
+
+Approach 		 :  Count the numbers of 1,2,3 . Then print the minimum occurance bacause that is the maximum team possible. To print team members push 1,2,3 index value in separate 3 vectors and print the vectors.
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+ 
+ 
+int main() {
+    int n,m;
+    int cnt[5]={};
+    vector<int> v[5];
+    cin>>n;
+    for(int i=0;i<n;i++){
+    	cin>>m;
+    	cnt[m]++;
+    	v[m].push_back(i+1);
+	}
+	int ans=min(cnt[1],min(cnt[2],cnt[3]));
+	cout<<ans<<endl;
+	for(int i=0;i<ans;i++){
+		cout<<v[1][i]<<" "<<v[2][i]<<" "<<v[3][i]<<endl;
+	}
+}
