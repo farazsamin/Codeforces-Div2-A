@@ -1,0 +1,30 @@
+/*
+Problem Link 	: https://codeforces.com/problemset/problem/707/A
+
+
+Approach 		:  If color is not black and white and grey.then it is #color.
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+ 
+ 
+int main() {
+  int n,m;
+  char ch;
+  cin>>n>>m;
+  int f=0;
+  char arr[n][m];
+  for(int i=0;i<n;i++){
+  	for(int j=0;j<m;j++){
+  		cin>>ch;
+  		if(ch!='W' && ch!='B' && ch!='G'){
+  		  f=1;		
+		}
+	  }
+  }
+  if(f==0)  cout<<"#Black&White"<<endl;
+  else cout<<"#Color"<<endl;
+ 
+}
