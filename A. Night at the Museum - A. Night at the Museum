@@ -1,0 +1,22 @@
+/*
+Link      :  https://codeforces.com/problemset/problem/731/A
+
+
+Approach  : Formula :  min(abs(prev-s[i]),(26-abs(prev-s[i])
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	string s;
+	cin>>s;
+	int ans=0;
+	int prev = 'a';
+	for(int i=0;i<s.size();i++){
+	    ans+=min(abs(prev-s[i]),(26-abs(prev-s[i])));
+	    prev=s[i];
+	  
+	}
+	  cout<<ans<<endl;
+}
