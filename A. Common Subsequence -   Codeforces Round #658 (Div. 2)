@@ -1,0 +1,45 @@
+/*
+Link      :  https://codeforces.com/problemset/problem/1382/A
+
+
+Approach  :  If any numbers match in two arrays,then ans is yes then print the number. Else ans is no.
+
+
+ 
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	int t,n,m;
+	cin>>t;
+	while(t--){
+		int f=0;
+		cin>>n>>m;
+		int arr[n],brr[m],cnt1[1001]={},cnt2[1001]={};
+		for(int i=0;i<n;i++) {
+		  cin>>arr[i];
+		  cnt1[arr[i]]++;
+     	}
+		for(int i=0;i<m;i++){
+		  cin>>brr[i];
+		  cnt2[brr[i]]++;
+	    }
+	    for(int i=1;i<=1000;i++){
+	    	if(cnt1[i] && cnt2[i]){
+	    		cout<<"YES"<<endl;
+	    		cout<<"1"<<" "<<i<<endl;
+	    		f=1;
+	    		break;
+			}
+		}
+		if(f==0)
+		cout<<"NO"<<endl;
+	
+	
+	}
+	
+
+
+}
