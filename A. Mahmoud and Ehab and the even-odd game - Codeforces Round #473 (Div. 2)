@@ -1,0 +1,17 @@
+/*
+Problem Link 	: https://codeforces.com/problemset/problem/959/A
+
+
+Approach 		:   If n is even then Mahmoud wins. If n is odd , then Mahmud takes even number from it but the number is still odd, Then Ehab wins.
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+    int n;
+    cin>>n;
+    if(n%2) cout<<"Ehab"<<endl;
+    else cout<<"Mahmoud"<<endl;
+}
