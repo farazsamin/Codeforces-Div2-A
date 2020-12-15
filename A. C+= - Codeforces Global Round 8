@@ -1,0 +1,33 @@
+/*
+Link      :  https://codeforces.com/contest/1368/problem/A
+
+
+Approach  :  If a>b , b+=a .else a+=b . Count this step until a or b>n.
+
+
+ 
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	int t,n,a,b;
+	cin>>t;
+	while(t--){
+		cin>>a>>b>>n;
+		int cnt=0;
+		while(a<=n && b<=n){
+			if(a>b){
+				b+=a;
+				cnt++;
+			}
+			else{
+				a+=b;
+				cnt++;
+			}
+		}
+		cout<<cnt<<endl;
+	    
+	}
+}
