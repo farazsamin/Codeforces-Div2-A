@@ -1,0 +1,30 @@
+/*
+Link      :  https://codeforces.com/contest/119/problem/A
+
+
+Approach  :  Find gcd until n<=0.
+
+
+ 
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	int a,b,n,f=0;
+	cin>>a>>b>>n;
+	while(n>0){
+		if(f==0){
+			n-=__gcd(a,n);
+			f=1;
+		}else{
+			n-=__gcd(b,n);
+			f=0;
+		}
+	}
+	cout<<1-f<<endl;
+	
+
+
+}
