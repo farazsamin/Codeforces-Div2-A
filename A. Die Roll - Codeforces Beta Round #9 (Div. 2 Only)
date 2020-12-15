@@ -1,0 +1,39 @@
+/*
+Link      :  https://codeforces.com/contest/9/problem/A
+
+
+Approach  :  Find the remain by taking maximum of two numbers. Then Print in fractional number.
+
+
+ 
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	int m,remain,a,b,ans1,ans2;
+	cin>>a>>b;
+    m=max(a,b);
+    remain=6-m+1;
+    
+    ans1=remain;
+    ans2=6;
+    
+    if(remain==6) {
+    	ans1=1;
+    	ans2=1;
+	}
+    if(remain%2==0 && remain<6){
+    	ans1= remain/2;
+    	ans2= 6/2;
+	}
+	else if(remain%3==0 && remain<6){
+    	ans1= remain/3;
+    	ans2= 6/3;
+	}
+	cout<<ans1<<"/"<<ans2<<endl;
+	
+
+
+}
