@@ -1,0 +1,41 @@
+/*
+Problem Link 	: https://codeforces.com/contest/381/problem/A
+
+
+Approach 		  : Just do the implemetation using two pointer technique according to the question statement. If n is odd then add the last value with sereja's value because it will his turn.
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+    int n,sereja=0,dima=0;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++) cin>>arr[i];
+    int start=0,end=n-1;
+    while(start<end){
+    
+        if(arr[start]>arr[end]){
+    		sereja+=arr[start];
+    		start++;
+		}else{
+			sereja+=arr[end];
+			end--;
+		}
+		
+	    if(arr[start]>arr[end]){
+    		dima+=arr[start];
+    		start++;
+		}else{
+			dima+=arr[end];
+			end--;
+		}
+		
+	}
+	if(n%2) sereja +=arr[start];
+	cout<<sereja<<" "<<dima<<endl;
+    
+    
+}
