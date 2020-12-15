@@ -1,0 +1,18 @@
+/*
+Problem Link 	: https://codeforces.com/problemset/problem/1186/A
+
+
+Approach 		:  If number of pen or book is less than students,then ans is no.else yes.
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+    int n,b,p;
+    cin>>n>>b>>p;
+    if(b>=n && p>=n) cout<<"Yes"<<endl;
+    else cout<<"No"<<endl;
+    
+}
