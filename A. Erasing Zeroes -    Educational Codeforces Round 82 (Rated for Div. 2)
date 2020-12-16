@@ -1,0 +1,42 @@
+/*
+Link      :  https://codeforces.com/problemset/problem/1303/A
+
+
+Approach  :  Find the index of first and last 1. then count the number of 0 and print it.
+
+
+ 
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+    long long t,n,m;
+    cin>>t;
+    while(t--){
+    	 string s;
+    	 cin>>s;
+    	 int start=-1,end=-1,ans=0,n=0;
+    	 n=s.size();
+    	 for(int i=0;i<n;i++){
+    	 	if(s[i]=='1'){
+    	 		start=i;
+    	 		break;
+			 }
+		 }
+		 for(int i=n-1;i>0 && start!=-1;i--){
+		 	if(s[i]=='1') {
+		 		end=i;
+		 		break;
+			 }
+		 }
+//		 cout<<end<<endl;
+		 for(int i=start;i<=end;i++){
+		 	if(s[i]=='0')
+		 	   ans++;
+		 }
+		 cout<<ans<<endl;
+    }
+
+}
