@@ -1,0 +1,23 @@
+/*
+Link      :  https://codeforces.com/problemset/problem/1312/A
+
+
+Approach  :
+
+
+ 
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+    long long t,n,m;
+    cin>>t;
+    while(t--){
+    	  cin>>n>>m;
+    	  if(n%m) cout<<"NO"<<endl;
+    	  else cout<<"YES"<<endl;
+    }
+
+}
