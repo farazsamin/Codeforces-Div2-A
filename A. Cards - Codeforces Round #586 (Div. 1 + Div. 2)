@@ -1,0 +1,30 @@
+/*
+Link      :  https://codeforces.com/problemset/problem/1220/A
+
+
+Approach  :  Count the number of z as occurance of zero and other as occurance of one.
+
+
+ 
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+  int n,zero=0,one=0;
+  cin>>n;
+  string s;
+  cin>>s;
+  for(int i=0;i<s.size();i++){
+  	if(s[i]=='z') zero++;
+  	else if(s[i]=='n') one++;
+  }
+  while(one--) cout<<"1"<<" ";
+  while(zero--) cout<<"0"<<" ";
+  cout<<endl;
+   
+	  
+
+
+}
