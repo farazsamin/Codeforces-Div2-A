@@ -1,0 +1,32 @@
+/*
+Link      :  https://codeforces.com/problemset/problem/448/A
+
+
+Approach  : Formula : (Cup+5-1)/5 
+                       (Medal+10-1)/10
+
+
+ 
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+    int cup=0,medal=0,arr[3],brr[3];
+    for(int i=0;i<3;i++) {
+	   cin>>arr[i];
+	   cup+=arr[i];
+    }
+    for(int i=0;i<3;i++){
+	   cin>>brr[i];
+	   medal+=brr[i];
+    }
+    int n;
+    cin>>n;
+    int cnt =((cup+5-1)/5)+((medal+10-1)/10);
+    if(cnt>n) cout<<"NO"<<endl;
+    else cout<<"YES"<<endl;
+    
+    
+}
