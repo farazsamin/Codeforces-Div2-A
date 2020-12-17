@@ -1,0 +1,36 @@
+/*
+Link      :  https://codeforces.com/problemset/problem/1207/A
+
+
+Approach  :  According to the highest price value count the chicken and beef burgers and price.
+ 
+
+ 
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+   int t,h,b,p,c,f;
+   cin>>t;
+   while(t--){
+   	cin>>b>>p>>f;
+   	cin>>h>>c;
+   	int ans=0;
+   	b/=2;
+   	if(h<c){
+   	  swap(h,c);
+	  swap(p,f);	
+	}
+	int cnt = min(b, p);
+    b -= cnt, p -= cnt;
+    ans+= h*cnt; 
+        
+    cnt = min(b,f);
+    b -= cnt, f -= cnt;
+    ans+= c * cnt; 
+	
+	cout<<ans<<endl;
+   }
+}
