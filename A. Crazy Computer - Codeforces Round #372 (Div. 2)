@@ -1,0 +1,29 @@
+/*
+Link :    https://codeforces.com/problemset/problem/716/A
+
+
+Approach :  IF b-a <=c then increment the cnt value by 1 . then print it at last
+
+
+
+
+*/
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+	int n, c; 
+	cin >>n>>c;
+	int arr[n];
+	for(int i=0;i< n;i++) cin>>arr[i];
+	int cnt=1;
+	for(int i= 0;i<n-1;i++)
+	{
+			if(arr[i+1]-arr[i]<=c) cnt++;
+			else cnt = 1;
+		
+	}
+	if(n==0) cnt=0;
+	cout<<cnt<<endl;
+}
