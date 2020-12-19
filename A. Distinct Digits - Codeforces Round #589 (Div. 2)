@@ -1,0 +1,33 @@
+/*
+
+Link :  https://codeforces.com/contest/1228/problem/A
+
+
+Approach : 
+
+
+
+
+*/
+
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+#define long int64_t
+ 
+int main()
+{
+    int l, r;
+    cin >> l >> r;
+    for(int i = l; i <= r; ++i)
+    {
+        string s = to_string(i);
+        set<char> st(s.begin(), s.end());
+        if(st.size() == s.length())
+            return cout << i, 0;
+    }
+    cout << -1;
+    return 0;
+}
