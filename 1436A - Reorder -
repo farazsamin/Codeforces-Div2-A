@@ -1,0 +1,25 @@
+/*
+Link      :  https://codeforces.com/problemset/problem/1436/A   
+
+Approach  : As ith number in the array are added ith times . So, total sum won't be changed after permutation. So, just check if total sum is equal to m, then ans is yes else ans in no.
+*/
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+	int t,n,m;
+	cin>>t;
+	while(t--){
+		cin>>n>>m;
+		int sum=0;
+		int arr[n];
+		for(int i=0;i<n;i++) 
+		{
+		cin>>arr[i];
+		sum+=arr[i];
+	    }
+	    if(sum==m) cout<<"YES"<<endl;
+	    else cout<<"NO"<<endl;
+	}
+}
